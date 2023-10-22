@@ -9,8 +9,10 @@ TASK 1
 
   /* Use grid-template-columns to set four equal width columns */
   /* Experiment with both the repeat() notation and writing out the full column definition */
-
+  grid-template-columns: repeat(4, 1fr);
+  /* columns: 12rem; */
   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  grid-gap: 1em;
 }
 
 /*
@@ -21,32 +23,37 @@ TASK 1
 
 .grid-container-task-2 {
   display: grid;
-
+  
   /* Use grid-template-columns to set four equal width columns */
-
+  grid-template-columns: repeat(4, 1fr);
   /* Use grid-template-rows to set two rows each with an equal height */
-
+  grid-template-rows: repeat(2, 1fr);
   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  gap: 2rem
 }
 
 .grid-container-task-2 .item-1 {
   /* Add a grid-row-start to have this item start at the top most row line */
+  grid-column-start: 1;
 
   /*
     Add a grid-row-end to have the item start at the last row line
     HINT: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
   */
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .grid-container-task-2 .item-2 {
   /* Use grid-columnd-start to start at the 3rd column line */
-
+  grid-column-start: 3;
   /*
     Use grid-column-end to end at the last column line
     HINT: Find out what "-1" does
   */
-
+  grid-column-end: -1;
   /* Use grid-row-start to start at the 2nd row line */
+  grid-row-start: 2;
 }
 
 /*
@@ -59,36 +66,50 @@ TASK 1
   display: grid;
 
   /* Use grid-template-columns to set four equal width columns */
-
+  grid-template-columns: repeat(4, 1fr);
   /* Use grid-template-rows to set four rows each with an equal height */
-
+  grid-template-rows: repeat(4, 1fr);
   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  gap: 2rem;
 }
 
 .grid-container-task-3 .item-1 {
   /* grid-column-start at line 1 */
-
+  grid-column-start: 1;
   /* grid-column-end at line 4 */
+  grid-column-end: 4;
 }
 
 .grid-container-task-3 .item-2 {
   /* grid-column-start at line 4 */
-
+  grid-column-start: 4;
   /* grid-row-start at line 1 */
-
+  grid-row-start: 1;
   /* grid-row-end at the last row line */
+  grid-row-end: -1;
 }
 
 .grid-container-task-3 .item-3 {
   /* that's enough hints for now */
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .grid-container-task-3 .item-4 {
   /* You totally got this */
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .grid-container-task-3 .item-5 {
   /* Easy as pie */
+  grid-row-start: 4;
+  
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 /*
@@ -100,14 +121,15 @@ TASK 1
 .grid-container-task-4 {
   display: grid;
 
-  /* The grid-template-columns is set two small bits of patting on either side and four equal width columns in the middle  */
+  /* The grid-template-columns is set two small bits of patting 
+  on either side and four equal width columns in the middle  */
   grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
 
   /* The grid-template-rows to set have three equal height rows */
   grid-template-rows: repeat(3, 1fr);
 
-   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
-   gap: 2rem;
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  gap: 2rem;
 
   /*
     Use grid-template-areas to name the different sections
@@ -127,22 +149,45 @@ TASK 1
 
   /* Fill in here */
 
+
+
 }
 
 .grid-container-task-4 .header {
   grid-area: header;
+  grid-row-start: 1;
+  grid-row-end: -1;
+
+  grid-column-start: 1;
+  grid-column-end: 9;
 }
 
 .grid-container-task-4 .main {
   grid-area: main;
+
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  grid-column-start: 2;
+  grid-column-end: 5;
+  
 }
 
 .grid-container-task-4 .side {
   grid-area: side;
+
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  grid-column-start: 5;
+  grid-column-end: 7;
 }
 
 .grid-container-task-4 .footer {
   grid-area: footer;
+
+  grid-column-start: 1;
+  grid-column-end: 9;
 }
 
 /*
@@ -160,34 +205,74 @@ TASK 1
 
 .grid-container-task-5 .item-1 {
   /* Fill in here */
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .grid-container-task-5 .item-2 {
   /* Fill in here */
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .grid-container-task-5 .item-3 {
   /* Fill in here */
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .grid-container-task-5 .item-4 {
   /* Fill in here */
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  grid-column-start: 4;
+  grid-column-end: 5;
 }
 
 .grid-container-task-5 .item-5 {
   /* Fill in here */
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
 
 .grid-container-task-5 .item-6 {
   /* Fill in here */
+  grid-row-start: 6;
+  grid-row-end: 7;
+
+  grid-column-start: 6;
+  grid-column-end: 7;
 }
 
 .grid-container-task-5 .item-7 {
   /* Fill in here */
+  grid-row-start: 7;
+  grid-row-end: 8;
+
+  grid-column-start: 7;
+  grid-column-end: 8;
 }
 
 .grid-container-task-5 .item-8 {
   /* Fill in here */
+  grid-row-start: 8;
+  grid-row-end: 9;
+
+  grid-column-start: 8;
+  grid-column-end: 9;
 }
 
 /*

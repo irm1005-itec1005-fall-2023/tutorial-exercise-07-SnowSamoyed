@@ -8,9 +8,70 @@
 
 
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
 
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
 
+.grid-container .item-1 {
+  background-color: rgb(120, 208, 79);
+  color: #101b16;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 
+  grid-row: 1;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.grid-container .item-2 {
+  background-color: rgb(98, 214, 213);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.grid-container .item-3 {
+  background-color: darkseagreen;
+  color: #101b16;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 4;
+}
+
+.grid-container .item-4 {
+  background-color: rgb(56, 239, 181);
+  color: #101b16;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  grid-row: 2;
+  grid-column:1;
+}
+
+.grid-container .item-5 {
+  background-color: rgb(52, 100, 52);
+  color: #edfff7;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+  grid-row: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
 
 /*
   CORE PAGE CSS - DO NOT MODIFY
